@@ -1,0 +1,39 @@
+.wrapper{
+    height: 100vh;    
+    display:flex;
+    background: grey;
+    justify-content: space-between;
+}
+
+.input{
+    background: rgba(187, 186, 186, 0.1); 
+    width :70%;
+    padding:1%;
+    
+}
+.output{
+    background: rgb(6, 37, 49);
+    width :30%;  
+    padding:1%;  
+    color: white;
+    
+}
+h1,h2{
+    text-align: center;
+}
+.select{
+width: 200px;
+padding: 0.5em;
+margin: 0.1em; 
+}
+.button{
+    margin-left: 20px;
+    border: 1.5px solid white;
+    background: transparent;
+    color: white;
+}
+.main{
+    display: flex;
+    align-content: flex-end;
+    justify-content: space-between;
+}
