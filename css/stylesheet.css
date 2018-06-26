@@ -1,22 +1,24 @@
 .wrapper{
     height: 100vh;    
     display:flex;
-    background: grey;
     justify-content: space-between;
 }
 
 .input{
     background: rgba(187, 186, 186, 0.1); 
-    width :70%;
+    width :65%;
     padding:1%;
     
 }
 .output{
     background: rgb(6, 37, 49);
-    width :30%;  
+    width :35%;  
     padding:1%;  
     color: white;
     
+}
+span{
+    padding-top: 12px;
 }
 h1,h2{
     text-align: center;
@@ -28,9 +30,18 @@ margin: 0.1em;
 }
 .button{
     margin-left: 20px;
-    border: 1.5px solid white;
-    background: transparent;
+    /* border: solid white; */
+    border:none;
+    background-image: linear-gradient(to right,#e052a0,#f15c41);;
     color: white;
+    /* font-weight:700; */
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover{
+    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+    color: white;
+
 }
 .main{
     display: flex;

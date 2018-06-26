@@ -3,21 +3,31 @@ const from = document.getElementById('select-from');
 const to = document.getElementById('select-to');
 let fragment = document.createDocumentFragment();
 
-const populateDropdown = function (data){
+const populateDropdown =  (data) => {
     const countryInfo = data.results;
     for(const[key,value] of Object.entries(countryInfo)){
         let option = document.createElement('option');    
         option.textContent = `${key}`;
-        fragment.appendChild(option);   
-        // console.log(fragment);
-        // console.log(`${key} ${value.currencyName}`);
+        fragment.appendChild(option);  
     }
-    to.appendChild(fragment);
     from.appendChild(fragment);
 }
+
+const populateDropdown2 =  (data) => {
+    const countryInfo = data.results;
+    for(const[key,value] of Object.entries(countryInfo)){
+        let option = document.createElement('option');    
+        option.textContent = `${key}`;
+        fragment.appendChild(option);  
+    }
+    to.appendChild(fragment);
+}
+
 fetch('https://free.currencyconverterapi.com/api/v5/countries').then(function(data){
-   return (data.json())
-}).then(populateDropdown);
+    let response2 = data.clone();
+    data.json().then(populateDropdown);
+    response2.json().then(populateDropdown2);
+});
 
 button.addEventListener('click', function(e){
     e.preventDefault();
