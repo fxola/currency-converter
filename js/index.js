@@ -6,9 +6,10 @@ let fragment = document.createDocumentFragment();
 const populateDropdown =  (data) => {
     const countryInfo = data.results;
     for(const[key,value] of Object.entries(countryInfo)){
-        let option = document.createElement('option');    
-        option.textContent = `${key}`;
-        fragment.appendChild(option);  
+        let option = document.createElement('option'); 
+            option.value = `${value.currencyId}`;
+            option.textContent = `${value.currencyName} (${value.currencySymbol})`;
+            fragment.appendChild(option);  
     }
     from.appendChild(fragment);
 }
@@ -17,7 +18,7 @@ const populateDropdown2 =  (data) => {
     const countryInfo = data.results;
     for(const[key,value] of Object.entries(countryInfo)){
         let option = document.createElement('option');    
-        option.textContent = `${key}`;
+        option.textContent = `${value.currencyName} (${value.currencySymbol})`;
         fragment.appendChild(option);  
     }
     to.appendChild(fragment);
