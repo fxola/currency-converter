@@ -8,7 +8,7 @@ const amount = document.getElementById('amount');
 
 let fragment = document.createDocumentFragment();
 
-const board = document.getElementsByClassName('display-board')[0];
+const board = document.getElementsByClassName('exchange')[0];
 
 const populateDropdown =  (data) => 
 {
@@ -80,6 +80,7 @@ button.addEventListener('click', (e) =>
         let exchangeAmount = amount.value;
         // console.log(exchangeAmount);
         let exchangeRate = exchangeAmount*exchangeValue;
+
         board.textContent = exchangeRate;
 
     }).catch(function(err){
