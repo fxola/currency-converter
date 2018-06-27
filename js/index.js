@@ -71,7 +71,8 @@ button.addEventListener('click', (e) =>
 
         return data.json();
 
-    }).then(function(data){
+    }).then( (data) =>
+    {
 
         let query = `${convertFrom}_${convertTo}`;
 
@@ -81,10 +82,11 @@ button.addEventListener('click', (e) =>
         // console.log(exchangeAmount);
         let exchangeRate = exchangeAmount*exchangeValue;
 
-        board.textContent = exchangeRate;
+        board.textContent = exchangeRate.toFixed(4);
 
-    }).catch(function(err){
-
+    }).catch( (err)=>
+    
+    {
         console.log(err);
     });
 
