@@ -61,8 +61,6 @@ label{
 .display-board{
     width: 100%;
     height: 20em;
-    border-radius: .5em;
-
 }
 
 .display-board > div.exchange{
@@ -125,6 +123,18 @@ label{
         }
         .input,.output{
             width :100%;
+        }
+
+        .display-board > div.exchange{
+            font-size: 2.5em;
+            padding-top: 1.3em;
+            text-align: center;
+        }
+
+        .display-board > div.exchange-rate{
+            margin-top: 1.3em;
+            font-size: 1em;
+            text-align: right;
         }
     }
 
