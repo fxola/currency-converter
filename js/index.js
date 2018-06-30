@@ -89,7 +89,7 @@ button.addEventListener('click', (e) =>
         let exchangeRate = exchangeAmount*exchangeValue;
 
         exchangeRate = exchangeRate.toLocaleString('en');
-        rateBoard.setAttribute("style", "border-top : 1px dashed red; border-bottom : 1px dashed red;");
+        // rateBoard.setAttribute("style", "border-top : 1px dashed red; border-bottom : 1px dashed red;");
 
         rateBoard.textContent = rate;
 
