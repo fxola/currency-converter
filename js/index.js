@@ -82,13 +82,14 @@ button.addEventListener('click', (e) =>
 
         let exchangeValue = data[query].val;
 
-        let rate =  `1 ${convertFrom} = ${exchangeValue} ${convertTo}`;
+        let rate =  `rate:  1 ${convertFrom} = ${exchangeValue} ${convertTo}`;
 
         let exchangeAmount = amount.value;
 
         let exchangeRate = exchangeAmount*exchangeValue;
 
         exchangeRate = exchangeRate.toLocaleString('en');
+        rateBoard.setAttribute("style", "border-top : 1px dashed red; border-bottom : 1px dashed red;");
 
         rateBoard.textContent = rate;
 
