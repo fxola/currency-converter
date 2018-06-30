@@ -107,42 +107,35 @@ label{
 }
 
 .button:hover{
-    /* #f15c41 */
     background-image: linear-gradient(to right,rgb(6, 37, 49),red);
     color: white;
     outline: none;
 }
 
-@media screen and (min-width: 30em) and (orientation: landscape) { 
 
-}
 
 /*==========  Mobile First Method  ==========*/
 
-    /* Custom, iPhone Retina */ 
-    @media only screen and (min-width : 20em) {
-
-
-    }
-
     /* Extra Small Devices, Phones */ 
-    @media only screen and (min-width : 480px) {
+    @media only screen and (max-width : 30em) {
+        .wrapper{
+            display:block;
+            width :100%;
 
+        }
+        .input,.output{
+            width :100%;
+        }
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) {
-
+        .wrapper{
+            display:flex;
+            height: auto;
+        }
     }
 
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
-
-    }
-
-    /* Large Devices, Wide Screens */
-    @media only screen and (min-width : 1200px) {
-
-    }
+ 
 
 
