@@ -1,7 +1,7 @@
 .wrapper{
     height: 100vh;    
     display:flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 @font-face {
     font-family: "digital 7 italic";
@@ -11,66 +11,85 @@
     background: rgb(6, 37, 49);
     width :50%;
     padding:1%;
+    font-family: 'Lato' sans-serif;
     
+    /* letter-spacing: .3em; */
+}
+input,select,.first{
+    color: #bdccdb;
 }
 .output{
-    background: rgba(6, 37, 49,0.94);
+    background: rgba(0, 0, 0); 
     width :50%;  
     padding:1%;  
     color: red;
+    font-family: "digital 7 italic";
 }
-span{
-    padding: 0.6em;
-    background: rgba(6, 37, 49,0.1);
-    color:rgba(6, 37, 49,0.8);
+.output> h1{
+    text-align: center;
+    color: red;
+    font-family: "digital 7 italic";
 }
-span.select-to{
-    padding-right: 1.6em;
-    text-align: right;
+form{
+    padding: 3%;
+    width: 50%;
+} 
+
+label{
+    display: block;
+    margin-bottom: 2%;
+    color: #fff;
+    font-weight: bold; 
+    font-family: 'Lato', sans-serif;
 }
 .display-board{
     width: 100%;
     height: 20em;
     background: black;
     border-radius: .5em;
-    font-family: "digital 7 italic";
 
 }
 .display-board > div{
     font-size: 7em;
     padding-top: 1.3em;
+    text-align: center;
+}
+span.exchange{
+    background: rgba(255,255,255, 0.1);
+}
+h1{
+    text-align: center;
+    color: white;
+    font-family: 'Lato' , sans-serif;
 }
 
-h1,h2{
-    text-align: center;
+.parent{
+    margin-bottom: 1.2em;
 }
-.select, #amount{
-width: 200px;
-padding: 0.5em;
-margin: 1em; 
+#amount,.select{
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 0.6em;
+    background: transparent;
+    border-left: 3px solid #bdccdb;
 }
-form{
-    text-align: center;
-    padding: 3%;
-}
+
 .button{
-    margin-left: 20px;
-    /* border: solid white; */
+    outline: none;
     border:none;
-    background-image: linear-gradient(to right,#e052a0,#f15c41);;
+    background-image: linear-gradient(to right,#bdccdb,rgb(6, 37, 49)); 
     color: white;
-    padding: 1em 2em 1em 2em;
-    /* font-weight:700; */
+    padding: .7em 1em .7em 1em;
+    font-weight:700;
+    font-family: 'Lato', sans-serif; 
+    letter-spacing: 1.5px;
+    text-align: left;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 5em;
 }
 .button:hover{
-    background-image: linear-gradient(to right,#3ec7e0,#526bf4);
+    background-image: linear-gradient(to right,rgb(6, 37, 49),#f15c41);
     color: white;
-
+    outline: none;
 }
-/* .main{
-    display: flex;
-    align-content: flex-end;
-    justify-content: space-between;
-} */

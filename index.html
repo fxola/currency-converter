@@ -6,26 +6,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <title>Currency Converter</title>
 </head>
 <body>
     <div class="wrapper">
             <div class="input">
-                <h1>Currency Converter</h1>
+                <h1>
+                    <span class="first">Currency</span>
+                    <span class="second">Converter</span>
+                </h1>
                 <form action="">
                     <div class="main">
-                        <span>AMOUNT</span><input type="text" id="amount"> <br>
-                        <span>FROM</span><select name="convert-from" class="select" id="select-from">
-                            </select><br>
-                        <span class="select-to">TO</span><select name="convert-to"  class="select" id="select-to">
-                            </select><br>
-                        <button class="button">CONVERT</button>
+                        <div class="parent">
+                            <label for="amount">Amount</label>
+                            <input type="number" name="amount"id="amount" placeholder="Enter Amount"> <br><br>
+                        </div>
+
+                        <div class="parent">
+                                <label for="convert-from">From</label>
+                                <select name="convert-from" class="select" id="select-from" >
+                                    </select><br><br>
+                        </div>
+
+                        <div class="parent">
+                                <label for="convert-to">To</label>
+                                <select name="convert-to"  class="select" id="select-to" >
+                                    </select><br><br>
+                        </div>
+                        <button class="button">Convert</button>
                     </div>
                 </form>
             </div>
 
             <div class="output">
-                <h2>Skin in the game</h2>
+                <h1>Fola de Change</h1>
                 <div class="display-board"> 
                     <div class="exchange">
 

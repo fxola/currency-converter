@@ -81,8 +81,8 @@ button.addEventListener('click', (e) =>
         let exchangeAmount = amount.value;
         // console.log(exchangeAmount);
         let exchangeRate = exchangeAmount*exchangeValue;
-
-        board.textContent = exchangeRate.toFixed(4);
+        exchangeRate = exchangeRate.toLocaleString('en');
+        board.textContent = `${exchangeRate} ${convertTo}`;
 
     }).catch( (err)=>
     
