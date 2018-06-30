@@ -74,8 +74,6 @@ label{
     text-align: right;
 }
 
-
-
 .parent{
     margin-bottom: 1.2em;
 }
@@ -119,7 +117,6 @@ label{
             display:block;
             width :100%;
             height: auto;
-
         }
         .input,.output{
             width :100%;
