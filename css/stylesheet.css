@@ -135,6 +135,7 @@ label{
         }
 
         .display-board > div.exchange-rate{
+            border:none;
             text-align: left;
             margin-top: 1.3em;
             font-size: 1.5em;
