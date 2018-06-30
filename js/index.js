@@ -10,6 +10,9 @@ let fragment = document.createDocumentFragment();
 
 const board = document.getElementsByClassName('exchange')[0];
 
+const rateBoard = document.getElementsByClassName('exchange-rate')[0];
+
+
 const populateDropdown =  (data) => 
 {
     const countryInfo = data.results;
@@ -62,8 +65,8 @@ button.addEventListener('click', (e) =>
 {
 
     e.preventDefault();
-
-    board.textContent = 'Loading...';
+    rateBoard.textContent = 'Loading Exchange Rate...';
+    board.textContent = 'Converting...';
     convertFrom = from.value;
 
     convertTo = to.value;
@@ -79,11 +82,15 @@ button.addEventListener('click', (e) =>
 
         let exchangeValue = data[query].val;
 
+        let rate =  `1 ${convertFrom} = ${exchangeValue} ${convertTo}`;
+
         let exchangeAmount = amount.value;
 
         let exchangeRate = exchangeAmount*exchangeValue;
 
         exchangeRate = exchangeRate.toLocaleString('en');
+
+        rateBoard.textContent = rate;
 
         board.textContent = `${exchangeRate} ${convertTo}`;
 
