@@ -63,6 +63,7 @@ button.addEventListener('click', (e) =>
 
     e.preventDefault();
 
+    board.textContent = 'Loading...';
     convertFrom = from.value;
 
     convertTo = to.value;
@@ -79,14 +80,17 @@ button.addEventListener('click', (e) =>
         let exchangeValue = data[query].val;
 
         let exchangeAmount = amount.value;
-        // console.log(exchangeAmount);
+
         let exchangeRate = exchangeAmount*exchangeValue;
+
         exchangeRate = exchangeRate.toLocaleString('en');
+
         board.textContent = `${exchangeRate} ${convertTo}`;
 
     }).catch( (err)=>
     
     {
+        board.textContent = 'Please Try Again';
         console.log(err);
     });
 
