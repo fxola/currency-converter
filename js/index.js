@@ -109,7 +109,7 @@ button.addEventListener('click', (e) =>
 if(navigator.serviceWorker){
     navigator.serviceWorker.register('sw.js').then((data)=>{
         console.log('Service worker ti wa online', data);
-    }).catch((err)=>{
+    }).catch(function(err){
         console.log(err);
     })
 }
