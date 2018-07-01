@@ -89,6 +89,7 @@ button.addEventListener('click', (e) =>
         let exchangeRate = exchangeAmount*exchangeValue;
 
         exchangeRate = exchangeRate.toLocaleString('en');
+        
         board.setAttribute("style", "color: #bdccdb;");
 
         rateBoard.textContent = rate;
