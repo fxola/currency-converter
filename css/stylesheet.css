@@ -111,7 +111,7 @@ label{
 /*==========  Mobile First Method  ==========*/
 
     /* Extra Small Devices, Phones */ 
-    @media only screen and (max-width : 30em) {
+    @media only screen and (max-width : 40em) {
         .wrapper{
             display:block;
             width :100%;
