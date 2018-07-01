@@ -100,6 +100,7 @@ button.addEventListener('click', (e) =>
     
     {
         board.textContent = 'Please Try Again';
+        rateBoard.textContent = 'Failed';
         console.log(err);
     });
 
