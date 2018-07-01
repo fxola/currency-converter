@@ -1,6 +1,7 @@
 self.addEventListener('install', (e)=>{
+
     e.waitUntil(
-        caches.open('resources').then((cache)=>{
+        caches.open('static-resources').then((cache)=>{
             return cache.addAll([
                 './index.html',
                 './sw.js',
