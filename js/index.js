@@ -89,7 +89,7 @@ button.addEventListener('click', (e) =>
         let exchangeRate = exchangeAmount*exchangeValue;
 
         exchangeRate = exchangeRate.toLocaleString('en');
-        
+
         board.setAttribute("style", "color: #bdccdb;");
 
         rateBoard.textContent = rate;
@@ -104,3 +104,11 @@ button.addEventListener('click', (e) =>
     });
 
 });
+
+if(navigator.serviceWorker){
+    navigator.serviceWorker.register('sw.js').then((data)=>{
+        console.log('Service worker ti wa online', data);
+    }).catch(function(err){
+        console.log(err);
+    })
+}

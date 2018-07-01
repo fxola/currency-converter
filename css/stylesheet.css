@@ -127,6 +127,7 @@ label{
             font-size: 3em;
             padding-top: 1.3em;
             text-align: center;
+            margin-bottom: .5em;
         }
 
         .display-board > div.exchange-rate{
@@ -139,11 +140,12 @@ label{
     }
  
     /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) {
+    @media only screen and (min-width : 640px) {
         .wrapper{
             display:flex;
             height: auto;
         }
+      
     }
 
  
