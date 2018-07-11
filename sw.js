@@ -1,11 +1,11 @@
 self.addEventListener('install', (e)=>{
     e.waitUntil(
-        caches.open('static-resource').then((cache)=>{
+        caches.open('static-resource-v2').then((cache)=>{
             return cache.addAll([
-                'index.html',
-                'css/font/digital-7-italic.ttf',
-                'css/normalize.css',
-                'css/stylesheet.css',
+                './index.html',
+                './css/font/digital-7-italic.ttf',
+                './css/normalize.css',
+                './css/stylesheet.css',
                 'https://fonts.googleapis.com/css?family=Lato',
                 'https://free.currencyconverterapi.com/api/v5/countries'
             ])
